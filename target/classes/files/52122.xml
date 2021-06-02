@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Результат_РГ_маммографии xmlns="http://schemas.oceanehr.com/templates" xmlns:rm="http://schemas.openehr.org/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" template_id="openEHR-EHR-COMPOSITION.t_RG_result_report_mammography.v3.1">
+	<name>
+		<value>Результат РГ маммографии</value>
+	</name>
+	<uid xsi:type="rm:OBJECT_VERSION_ID">
+		<rm:value>67bc54cc-9e71-43bb-97e1-5fb2747173f3::default::1</rm:value>
+	</uid>
+	<language>
+		<terminology_id>
+			<value>ISO_639-1</value>
+		</terminology_id>
+		<code_string>ru</code_string>
+	</language>
+	<territory>
+		<terminology_id>
+			<value>ISO_3166-1</value>
+		</terminology_id>
+		<code_string>RU</code_string>
+	</territory>
+	<category>
+		<value>event</value>
+		<defining_code>
+			<terminology_id>
+				<value>openehr</value>
+			</terminology_id>
+			<code_string>433</code_string>
+		</defining_code>
+	</category>
+	<composer xsi:type="rm:PARTY_IDENTIFIED">
+		<rm:external_ref>
+			<rm:id xsi:type="rm:GENERIC_ID">
+				<rm:value>12083580738</rm:value>
+				<rm:scheme>undefined</rm:scheme>
+			</rm:id>
+			<rm:namespace>Парус</rm:namespace>
+			<rm:type>ANY</rm:type>
+		</rm:external_ref>
+		<rm:name>Силина Юлия Михайловна</rm:name>
+	</composer>
+	<context>
+		<start_time>
+			<rm:value>2021-05-31T17:47:09+03:00</rm:value>
+		</start_time>
+		<setting>
+			<rm:value>other care</rm:value>
+			<rm:defining_code>
+				<rm:terminology_id>
+					<rm:value>openehr</rm:value>
+				</rm:terminology_id>
+				<rm:code_string>238</rm:code_string>
+			</rm:defining_code>
+		</setting>
+		<Подробности_контекста>
+			<name>
+				<value>Подробности контекста</value>
+			</name>
+			<ИД_события>
+				<name>
+					<value>ИД события</value>
+				</name>
+				<value>
+					<rm:issuer>undefined</rm:issuer>
+					<rm:assigner>undefined</rm:assigner>
+					<rm:id>45634294</rm:id>
+					<rm:type>Идентификатор События</rm:type>
+				</value>
+			</ИД_события>
+			<ИД_документа>
+				<name>
+					<value>ИД документа</value>
+				</name>
+				<value>
+					<rm:issuer>undefined</rm:issuer>
+					<rm:assigner>undefined</rm:assigner>
+					<rm:id>1a6d2642-822e-48c7-b6d1-26b5b7f02c35</rm:id>
+					<rm:type>Идентификатор документа СИМИ</rm:type>
+				</value>
+			</ИД_документа>
+			<ИД_пациента>
+				<name>
+					<value>ИД пациента</value>
+				</name>
+				<value>
+					<rm:issuer>undefined</rm:issuer>
+					<rm:assigner>undefined</rm:assigner>
+					<rm:id>qwer4</rm:id>
+					<rm:type>Идентификатор пациента</rm:type>
+				</value>
+			</ИД_пациента>
+			<Автор_информации>
+				<name>
+					<value>Автор информации</value>
+				</name>
+				<Идентификатор_исполнения_должности_медработника>
+					<name>
+						<value>Идентификатор исполнения должности медработника</value>
+					</name>
+					<value>
+						<rm:issuer>undefined</rm:issuer>
+						<rm:assigner>undefined</rm:assigner>
+						<rm:id>10721668</rm:id>
+						<rm:type>EMIAS</rm:type>
+					</value>
+				</Идентификатор_исполнения_должности_медработника>
+				<Наименование_должности>
+					<name>
+						<value>Наименование должности</value>
+					</name>
+					<value>
+						<rm:value>Врач - невролог</rm:value>
+					</value>
+				</Наименование_должности>
+				<Наименование_структурного_подразделения>
+					<name>
+						<value>Наименование структурного подразделения</value>
+					</name>
+					<value>
+						<rm:value>Консультативное отделение</rm:value>
+					</value>
+				</Наименование_структурного_подразделения>
+				<Наименование_филиала>
+					<name>
+						<value>Наименование филиала</value>
+					</name>
+					<value>
+						<rm:value>ГБУЗ ГП №175 ДЗМ</rm:value>
+					</value>
+				</Наименование_филиала>
+				<Наименование_юридического_лица>
+					<name>
+						<value>Наименование юридического лица</value>
+					</name>
+					<value>
+						<rm:value>ГБУЗ ГП №175 ДЗМ</rm:value>
+					</value>
+				</Наименование_юридического_лица>
+			</Автор_информации>
+			<Структура_медицинской_организации>
+				<name>
+					<value>Структура медицинской организации</value>
+				</name>
+				<ИД_объекта>
+					<name>
+						<value>ИД объекта</value>
+					</name>
+					<value>
+						<rm:issuer>issuer</rm:issuer>
+						<rm:assigner>assigner</rm:assigner>
+						<rm:id>204</rm:id>
+						<rm:type>type</rm:type>
+					</value>
+				</ИД_объекта>
+				<Тип_объекта>
+					<name>
+						<value>Тип объекта</value>
+					</name>
+					<value>
+						<value>амбулаторно-поликлинический центр</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0019</code_string>
+						</defining_code>
+					</value>
+				</Тип_объекта>
+				<Наименование>
+					<name>
+						<value>Наименование</value>
+					</name>
+					<value>
+						<rm:value>ГБУЗ ГП №175 ДЗМ</rm:value>
+					</value>
+				</Наименование>
+			</Структура_медицинской_организации>
+			<Адрес_медицинской_организации>
+				<name>
+					<value>Адрес медицинской организации</value>
+				</name>
+				<Субъект_РФ>
+					<name>
+						<value>Субъект РФ</value>
+					</name>
+					<value>
+						<rm:value>Москва</rm:value>
+					</value>
+				</Субъект_РФ>
+				<Муниципальный_район__openBrkt_городской_округ_closeBrkt_>
+					<name>
+						<value>Муниципальный район (городской округ)</value>
+					</name>
+					<value>
+						<rm:value>муниципальный_район_городской_округ</rm:value>
+					</value>
+				</Муниципальный_район__openBrkt_городской_округ_closeBrkt_>
+				<Поселение>
+					<name>
+						<value>Поселение</value>
+					</name>
+					<value>
+						<rm:value>номер_земельного_участка</rm:value>
+					</value>
+				</Поселение>
+				<Населенный_пункт>
+					<name>
+						<value>Населенный пункт</value>
+					</name>
+					<value>
+						<rm:value>населенный_пункт</rm:value>
+					</value>
+				</Населенный_пункт>
+				<Элемент_планировочной_структуры>
+					<name>
+						<value>Элемент планировочной структуры</value>
+					</name>
+					<value>
+						<rm:value>элемент_планировочной_структуры</rm:value>
+					</value>
+				</Элемент_планировочной_структуры>
+				<Улица>
+					<name>
+						<value>Улица</value>
+					</name>
+					<value>
+						<rm:value>Челябинская улица</rm:value>
+					</value>
+				</Улица>
+				<Номер_здания__openBrkt_сооружения_closeBrkt_>
+					<name>
+						<value>Номер здания (сооружения)</value>
+					</name>
+					<Номер_дома>
+						<name>
+							<value>Номер дома</value>
+						</name>
+						<value>
+							<rm:value>20</rm:value>
+						</value>
+					</Номер_дома>
+				</Номер_здания__openBrkt_сооружения_closeBrkt_>
+				<Номер_земельного_участка>
+					<name>
+						<value>Номер земельного участка</value>
+					</name>
+					<value>
+						<rm:value>номер_земельного_участка</rm:value>
+					</value>
+				</Номер_земельного_участка>
+				<Дополнительная_информация>
+					<name>
+						<value>Дополнительная информация</value>
+					</name>
+					<value>
+						<rm:value>дополнительная_информация</rm:value>
+					</value>
+				</Дополнительная_информация>
+			</Адрес_медицинской_организации>
+			<Информация_о_месте_Cобытия>
+				<name>
+					<value>Информация о месте Cобытия</value>
+				</name>
+				<Событие_произошло>
+					<name>
+						<value>Событие произошло</value>
+					</name>
+					<value>
+						<value>В медицинской организации</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0070</code_string>
+						</defining_code>
+					</value>
+				</Событие_произошло>
+				<Субъект_РФ>
+					<name>
+						<value>Субъект РФ</value>
+					</name>
+					<value>
+						<rm:value>Москва</rm:value>
+					</value>
+				</Субъект_РФ>
+				<Муниципальный_район__openBrkt_городской_округ_closeBrkt_>
+					<name>
+						<value>Муниципальный район (городской округ)</value>
+					</name>
+					<value>
+						<rm:value>муниципальный_район_городской_округ</rm:value>
+					</value>
+				</Муниципальный_район__openBrkt_городской_округ_closeBrkt_>
+				<Поселение>
+					<name>
+						<value>Поселение</value>
+					</name>
+					<value>
+						<rm:value>поселение</rm:value>
+					</value>
+				</Поселение>
+				<Населенный_пункт>
+					<name>
+						<value>Населенный пункт</value>
+					</name>
+					<value>
+						<rm:value>населенный_пункт</rm:value>
+					</value>
+				</Населенный_пункт>
+				<Элемент_планировочной_структуры>
+					<name>
+						<value>Элемент планировочной структуры</value>
+					</name>
+					<value>
+						<rm:value>элемент_планировочной_структуры</rm:value>
+					</value>
+				</Элемент_планировочной_структуры>
+				<Улица>
+					<name>
+						<value>Улица</value>
+					</name>
+					<value>
+						<rm:value>внутригородская территория поселение Филимонковское, деревня Верхнее Валуево, 5-я Валуевская улица</rm:value>
+					</value>
+				</Улица>
+				<Номер_здания__openBrkt_сооружения_closeBrkt_>
+					<name>
+						<value>Номер здания (сооружения)</value>
+					</name>
+					<Номер_дома>
+						<name>
+							<value>Номер дома</value>
+						</name>
+						<value>
+							<rm:value>20</rm:value>
+						</value>
+					</Номер_дома>
+				</Номер_здания__openBrkt_сооружения_closeBrkt_>
+				<Номер_земельного_участка>
+					<name>
+						<value>Номер земельного участка</value>
+					</name>
+					<value>
+						<rm:value>номер_земельного_участка</rm:value>
+					</value>
+				</Номер_земельного_участка>
+				<Номер_помещения>
+					<name>
+						<value>Номер помещения</value>
+					</name>
+					<value>
+						<rm:value>номер_помещения</rm:value>
+					</value>
+				</Номер_помещения>
+				<Дополнительная_информация>
+					<name>
+						<value>Дополнительная информация</value>
+					</name>
+					<value>
+						<rm:value>дополнительная_информация</rm:value>
+					</value>
+				</Дополнительная_информация>
+			</Информация_о_месте_Cобытия>
+			<Дополнительная_информация>
+				<name>
+					<value>Дополнительная информация</value>
+				</name>
+				<Профиль_медицинской_помощи>
+					<name>
+						<value>Профиль медицинской помощи</value>
+					</name>
+					<value>
+						<value>Терапия</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0087</code_string>
+						</defining_code>
+					</value>
+				</Профиль_медицинской_помощи>
+				<Виды_медицинской_помощи>
+					<name>
+						<value>Виды медицинской помощи</value>
+					</name>
+					<value>
+						<value>специализированная</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0051</code_string>
+						</defining_code>
+					</value>
+				</Виды_медицинской_помощи>
+				<Условия_оказания_медицинской_помощи>
+					<name>
+						<value>Условия оказания медицинской помощи</value>
+					</name>
+					<value>
+						<value>вне медицинской организации</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0054</code_string>
+						</defining_code>
+					</value>
+				</Условия_оказания_медицинской_помощи>
+				<Форма_оказания_медицинской_помощи>
+					<name>
+						<value>Форма оказания медицинской помощи</value>
+					</name>
+					<value>
+						<value>экстренная</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0058</code_string>
+						</defining_code>
+					</value>
+				</Форма_оказания_медицинской_помощи>
+			</Дополнительная_информация>
+		</Подробности_контекста>
+		<health_care_facility>
+			<rm:external_ref>
+				<rm:id xsi:type="rm:GENERIC_ID">
+					<rm:value>1037719010757</rm:value>
+					<rm:scheme>undefined</rm:scheme>
+				</rm:id>
+				<rm:namespace>Сервис РМР/РМУ</rm:namespace>
+				<rm:type>ANY</rm:type>
+			</rm:external_ref>
+			<rm:name>ГБУЗ ГП №175 ДЗМ</rm:name>
+		</health_care_facility>
+		<participations>
+			<rm:function>
+				<rm:value>Врач-рентгенолог</rm:value>
+			</rm:function>
+			<rm:performer xsi:type="rm:PARTY_IDENTIFIED">
+				<rm:external_ref>
+					<rm:id xsi:type="rm:GENERIC_ID">
+						<rm:value>10721668</rm:value>
+					</rm:id>
+					<rm:type>ANY</rm:type>
+				</rm:external_ref>
+				<rm:name>Силина Юлия Михайловна</rm:name>
+			</rm:performer>
+			<rm:mode>
+				<rm:value>not specified</rm:value>
+				<rm:defining_code>
+					<rm:terminology_id>
+						<rm:value>openehr</rm:value>
+					</rm:terminology_id>
+					<rm:code_string>193</rm:code_string>
+				</rm:defining_code>
+			</rm:mode>
+		</participations>
+	</context>
+	<Менструальный_цикл>
+		<name>
+			<value>Менструальный цикл</value>
+		</name>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>ru</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA_character-sets</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="rm:PARTY_SELF"/>
+		<data>
+			<origin>
+				<rm:value>2021-05-31T17:49:15.771811+03:00</rm:value>
+			</origin>
+			<Конкретный_день_в_цикле>
+				<name>
+					<value>Конкретный день в цикле</value>
+				</name>
+				<time>
+					<rm:value>2021-05-31T17:49:15.771811+03:00</rm:value>
+				</time>
+				<data>
+					<Описание>
+						<name>
+							<value>Описание</value>
+						</name>
+						<value>
+							<rm:value>1111111111111111</rm:value>
+						</value>
+					</Описание>
+					<День_цикла>
+						<name>
+							<value>День цикла</value>
+						</name>
+						<value>
+							<magnitude>1</magnitude>
+						</value>
+					</День_цикла>
+				</data>
+				<state/>
+			</Конкретный_день_в_цикле>
+		</data>
+	</Менструальный_цикл>
+	<Описание_снимков_и_заключение>
+		<name>
+			<value>Описание снимков и заключение</value>
+		</name>
+		<Лучевая_диагностика>
+			<name>
+				<value>Лучевая диагностика</value>
+			</name>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>ru</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="rm:PARTY_SELF"/>
+			<protocol>
+				<Подробности_запроса_на_исследование>
+					<name>
+						<value>Подробности запроса на исследование</value>
+					</name>
+					<Подробности_об_изображении>
+						<name>
+							<value>Подробности об изображении</value>
+						</name>
+						<Номер_исследования>
+							<name>
+								<value>Номер исследования</value>
+							</name>
+							<value>
+								<rm:id>4566787</rm:id>
+							</value>
+						</Номер_исследования>
+					</Подробности_об_изображении>
+				</Подробности_запроса_на_исследование>
+				<Доза_облучения>
+					<name>
+						<value>Доза облучения</value>
+					</name>
+					<Доза>
+						<name>
+							<value>Доза</value>
+						</name>
+						<mSv_value>
+							<magnitude>3</magnitude>
+							<precision>3</precision>
+							<units>mSv</units>
+						</mSv_value>
+					</Доза>
+				</Доза_облучения>
+				<Ячейка_лаборанта_радиологического_исследования>
+					<name>
+						<value>Ячейка лаборанта радиологического исследования</value>
+					</name>
+					<Протокол_проведения>
+						<name>
+							<value>Протокол проведения</value>
+						</name>
+						<value>
+							<rm:value>3</rm:value>
+						</value>
+					</Протокол_проведения>
+					<Особенности_исследования>
+						<name>
+							<value>Особенности исследования</value>
+						</name>
+						<Вынужденное_положение_больного>
+							<name>
+								<value>Вынужденное положение больного</value>
+							</name>
+							<value>
+								<value>да</value>
+								<defining_code>
+									<terminology_id>
+										<value>local</value>
+									</terminology_id>
+									<code_string>at0005</code_string>
+								</defining_code>
+							</value>
+						</Вынужденное_положение_больного>
+						<Описание_положения>
+							<name>
+								<value>Описание положения</value>
+							</name>
+							<value>
+								<rm:value>3333</rm:value>
+							</value>
+						</Описание_положения>
+						<Неадекватное_поведение>
+							<name>
+								<value>Неадекватное поведение</value>
+							</name>
+							<value>
+								<value>нет</value>
+								<defining_code>
+									<terminology_id>
+										<value>local</value>
+									</terminology_id>
+									<code_string>at0008</code_string>
+								</defining_code>
+							</value>
+						</Неадекватное_поведение>
+						<Иное>
+							<name>
+								<value>Иное</value>
+							</name>
+							<value>
+								<rm:value>ва</rm:value>
+							</value>
+						</Иное>
+						<Подготовка>
+							<name>
+								<value>Подготовка</value>
+							</name>
+							<value>
+								<rm:value>ываааа</rm:value>
+							</value>
+						</Подготовка>
+						<Проекции>
+							<name>
+								<value>Проекции</value>
+							</name>
+							<value>
+								<rm:value>ыва</rm:value>
+							</value>
+						</Проекции>
+						<Условия_исследования>
+							<name>
+								<value>Условия исследования</value>
+							</name>
+							<value>
+								<rm:value>ыва</rm:value>
+							</value>
+						</Условия_исследования>
+					</Особенности_исследования>
+				</Ячейка_лаборанта_радиологического_исследования>
+				<Контрастирование>
+					<name>
+						<value>Контрастирование</value>
+					</name>
+					<Контраст>
+						<name>
+							<value>Контраст</value>
+						</name>
+						<value>
+							<value>нет</value>
+							<defining_code>
+								<terminology_id>
+									<value>local</value>
+								</terminology_id>
+								<code_string>at0029</code_string>
+							</defining_code>
+						</value>
+					</Контраст>
+				</Контрастирование>
+				<Информация_об_оборудовании>
+					<name>
+						<value>Информация об оборудовании</value>
+					</name>
+					<Название_устройства>
+						<name>
+							<value>Название устройства</value>
+						</name>
+						<value>
+							<rm:value>Рентгенографический комплекс на 2 раб. места, 23131</rm:value>
+						</value>
+					</Название_устройства>
+					<Вид>
+						<name>
+							<value>Вид</value>
+						</name>
+						<value>
+							<rm:value>Рентгенографический комплекс на 2 раб. места</rm:value>
+						</value>
+					</Вид>
+					<Инвентарный_номер>
+						<name>
+							<value>Инвентарный номер</value>
+						</name>
+						<value>
+							<rm:id>1991</rm:id>
+						</value>
+					</Инвентарный_номер>
+					<Модель>
+						<name>
+							<value>Модель</value>
+						</name>
+						<value>
+							<rm:value>23131</rm:value>
+						</value>
+					</Модель>
+				</Информация_об_оборудовании>
+			</protocol>
+			<data>
+				<origin>
+					<rm:value>2021-05-31T17:49:15.771811+03:00</rm:value>
+				</origin>
+				<Любое_событие_as_Point_Event>
+					<name>
+						<value>Любое событие</value>
+					</name>
+					<time>
+						<rm:value>2021-05-31T17:49:15.771811+03:00</rm:value>
+					</time>
+					<data>
+						<Название>
+							<name>
+								<value>Название</value>
+							</name>
+							<value>
+								<rm:value>Маммография молочной железы профилактическая</rm:value>
+							</value>
+						</Название>
+						<Метод>
+							<name>
+								<value>Метод</value>
+							</name>
+							<value>
+								<rm:value>Лучевые методы исследования</rm:value>
+							</value>
+						</Метод>
+						<Подраздел_метода>
+							<name>
+								<value>Подраздел метода</value>
+							</name>
+							<value>
+								<rm:value>Рентгенографические методы исследования</rm:value>
+							</value>
+						</Подраздел_метода>
+						<Тип_плотности_тканей_по_ACR>
+							<name>
+								<value>Тип плотности тканей по ACR</value>
+							</name>
+							<Тип_плотности_тканей_по_ACR>
+								<name>
+									<value>Тип плотности тканей по ACR</value>
+								</name>
+								<value>
+									<value>В</value>
+								</value>
+							</Тип_плотности_тканей_по_ACR>
+						</Тип_плотности_тканей_по_ACR>
+						<Исследование_молочной_железы_справа>
+							<name>
+								<value>Исследование молочной железы справа</value>
+							</name>
+							<Клиническое_описание>
+								<name>
+									<value>Клиническое описание</value>
+								</name>
+								<value>
+									<rm:value>22222222222222222</rm:value>
+								</value>
+							</Клиническое_описание>
+							<Заключение>
+								<name>
+									<value>Заключение</value>
+								</name>
+								<value>
+									<rm:value>аааааааааааа</rm:value>
+								</value>
+							</Заключение>
+							<Наличие_имплантов>
+								<name>
+									<value>Наличие имплантов</value>
+								</name>
+								<value>
+									<value>нет</value>
+									<defining_code>
+										<terminology_id>
+											<value>local</value>
+										</terminology_id>
+										<code_string>at0.2</code_string>
+									</defining_code>
+								</value>
+							</Наличие_имплантов>
+							<Описание_имплантов>
+								<name>
+									<value>Описание имплантов</value>
+								</name>
+								<value>
+									<rm:value>333333333333333333</rm:value>
+								</value>
+							</Описание_имплантов>
+							<Кальцинаты_доброкачественные>
+								<name>
+									<value>Кальцинаты доброкачественные</value>
+								</name>
+								<Наличие>
+									<name>
+										<value>Наличие</value>
+									</name>
+									<value>
+										<value>нет</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0.11</code_string>
+										</defining_code>
+									</value>
+								</Наличие>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов</value>
+									</name>
+									<value>
+										<value>внутрикожные</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #2</value>
+									</name>
+									<value>
+										<value>внутрипротоковые</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #3</value>
+									</name>
+									<value>
+										<value>круглые</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #4</value>
+									</name>
+									<value>
+										<value>в рубце</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #5</value>
+									</name>
+									<value>
+										<value>по типу «яичной скорлупы»</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #6</value>
+									</name>
+									<value>
+										<value>по типу «поп-корна»</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #7</value>
+									</name>
+									<value>
+										<value>взвесь кальция «полулуния»</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #8</value>
+									</name>
+									<value>
+										<value>крупные продолговатые</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #9</value>
+									</name>
+									<value>
+										<value>точечные</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов #10</value>
+									</name>
+									<value>
+										<value>в стенках сосудов</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Локализация_кальцинатов>
+									<name>
+										<value>Локализация кальцинатов</value>
+									</name>
+									<value>
+										<value>ВВК (верхний внутренний к.)</value>
+									</value>
+								</Локализация_кальцинатов>
+								<Распределение>
+									<name>
+										<value>Распределение</value>
+									</name>
+									<value>
+										<value>единичные</value>
+									</value>
+								</Распределение>
+								<Распределение>
+									<name>
+										<value>Распределение #2</value>
+									</name>
+									<value>
+										<value>региональные</value>
+									</value>
+								</Распределение>
+								<Описание>
+									<name>
+										<value>Описание</value>
+									</name>
+									<value>
+										<rm:value>444444444</rm:value>
+									</value>
+								</Описание>
+							</Кальцинаты_доброкачественные>
+							<Кальцинаты_подозрительные>
+								<name>
+									<value>Кальцинаты подозрительные</value>
+								</name>
+								<Наличие>
+									<name>
+										<value>Наличие</value>
+									</name>
+									<value>
+										<value>нет</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0.22</code_string>
+										</defining_code>
+									</value>
+								</Наличие>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов</value>
+									</name>
+									<value>
+										<value>мелкие линейные или линейные ветвящиеся</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Локализация_кальцинатов>
+									<name>
+										<value>Локализация кальцинатов</value>
+									</name>
+									<value>
+										<value>преареолярно</value>
+									</value>
+								</Локализация_кальцинатов>
+								<Локализация_кальцинатов>
+									<name>
+										<value>Локализация кальцинатов #2</value>
+									</name>
+									<value>
+										<value>ВВК (верхний внутренний к.)</value>
+									</value>
+								</Локализация_кальцинатов>
+								<Распределение>
+									<name>
+										<value>Распределение</value>
+									</name>
+									<value>
+										<value>сегментарное</value>
+									</value>
+								</Распределение>
+								<Распределение>
+									<name>
+										<value>Распределение #2</value>
+									</name>
+									<value>
+										<value>линейное</value>
+									</value>
+								</Распределение>
+								<Описание>
+									<name>
+										<value>Описание</value>
+									</name>
+									<value>
+										<rm:value>55555555</rm:value>
+									</value>
+								</Описание>
+							</Кальцинаты_подозрительные>
+							<Нарушение_архитектоники_ткани>
+								<name>
+									<value>Нарушение архитектоники ткани</value>
+								</name>
+								<value>
+									<value>не выявлено</value>
+								</value>
+							</Нарушение_архитектоники_ткани>
+							<Интрамаммарные_л_fslash_узлы>
+								<name>
+									<value>Интрамаммарные л/узлы</value>
+								</name>
+								<value>
+									<value>не выявлены</value>
+								</value>
+							</Интрамаммарные_л_fslash_узлы>
+							<Аксиллярные_л_fslash_узлы>
+								<name>
+									<value>Аксиллярные л/узлы</value>
+								</name>
+								<value>
+									<value>не выявлены</value>
+								</value>
+							</Аксиллярные_л_fslash_узлы>
+							<Тип_плотности_тканей_по_ACR>
+								<name>
+									<value>Тип плотности тканей по ACR</value>
+								</name>
+								<value>
+									<value>A</value>
+									<defining_code>
+										<terminology_id>
+											<value>local</value>
+										</terminology_id>
+										<code_string>at0.5</code_string>
+									</defining_code>
+								</value>
+							</Тип_плотности_тканей_по_ACR>
+							<Кожа_comma__сосок_и_ареола>
+								<name>
+									<value>Кожа, сосок и ареола</value>
+								</name>
+								<Кожа_comma__сосок_и_ареола>
+									<name>
+										<value>Кожа, сосок и ареола</value>
+									</name>
+									<value>
+										<value>не изменены</value>
+									</value>
+								</Кожа_comma__сосок_и_ареола>
+								<Кожа_comma__сосок_и_ареола>
+									<name>
+										<value>Кожа, сосок и ареола #2</value>
+									</name>
+									<value>
+										<value>втяжение кожи</value>
+									</value>
+								</Кожа_comma__сосок_и_ареола>
+							</Кожа_comma__сосок_и_ареола>
+							<Структура_ткани>
+								<name>
+									<value>Структура ткани</value>
+								</name>
+								<Изменение_структуры>
+									<name>
+										<value>Изменение структуры</value>
+									</name>
+									<value>
+										<value>не изменена</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0002</code_string>
+										</defining_code>
+									</value>
+								</Изменение_структуры>
+								<Структура_ткани>
+									<name>
+										<value>Структура ткани</value>
+									</name>
+									<value>
+										<value>фиброзная</value>
+									</value>
+								</Структура_ткани>
+								<Асимметрия_структуры>
+									<name>
+										<value>Асимметрия структуры</value>
+									</name>
+									<value>
+										<value>есть</value>
+									</value>
+								</Асимметрия_структуры>
+								<Локализация_асимметрии>
+									<name>
+										<value>Локализация асимметрии</value>
+									</name>
+									<value>
+										<value>преареолярно</value>
+									</value>
+								</Локализация_асимметрии>
+								<Локализация_асимметрии>
+									<name>
+										<value>Локализация асимметрии #2</value>
+									</name>
+									<value>
+										<value>ВВК (верхний внутренний к.)</value>
+									</value>
+								</Локализация_асимметрии>
+							</Структура_ткани>
+							<Образования>
+								<name>
+									<value>Образования</value>
+								</name>
+								<Образования>
+									<name>
+										<value>Образования</value>
+									</name>
+									<value>
+										<value>не выявлены</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0008</code_string>
+										</defining_code>
+									</value>
+								</Образования>
+								<Клиническое_описание>
+									<name>
+										<value>Клиническое описание</value>
+									</name>
+									<value>
+										<rm:value>7777777777777</rm:value>
+									</value>
+								</Клиническое_описание>
+								<Форма>
+									<name>
+										<value>Форма</value>
+									</name>
+									<Форма>
+										<name>
+											<value>Форма</value>
+										</name>
+										<value>
+											<value>округлая</value>
+										</value>
+									</Форма>
+								</Форма>
+								<Контуры>
+									<name>
+										<value>Контуры</value>
+									</name>
+									<Контуры>
+										<name>
+											<value>Контуры</value>
+										</name>
+										<value>
+											<rm:value>8888888888888</rm:value>
+										</value>
+									</Контуры>
+								</Контуры>
+								<Плотность>
+									<name>
+										<value>Плотность</value>
+									</name>
+									<Плотность>
+										<name>
+											<value>Плотность</value>
+										</name>
+										<value>
+											<rm:value>9999999999999999</rm:value>
+										</value>
+									</Плотность>
+								</Плотность>
+							</Образования>
+							<Дополнительные_изменения>
+								<name>
+									<value>Дополнительные изменения</value>
+								</name>
+								<Дополнительные_изменения>
+									<name>
+										<value>Дополнительные изменения</value>
+									</name>
+									<value>
+										<rm:value>0000000000000000</rm:value>
+									</value>
+								</Дополнительные_изменения>
+							</Дополнительные_изменения>
+						</Исследование_молочной_железы_справа>
+						<Исследование_молочной_железы_слева>
+							<name>
+								<value>Исследование молочной железы слева</value>
+							</name>
+							<Клиническое_описание>
+								<name>
+									<value>Клиническое описание</value>
+								</name>
+								<value>
+									<rm:value>ббббббббббббббб</rm:value>
+								</value>
+							</Клиническое_описание>
+							<Заключение>
+								<name>
+									<value>Заключение</value>
+								</name>
+								<value>
+									<rm:value>ллллллллллллллллллл</rm:value>
+								</value>
+							</Заключение>
+							<Наличие_имплантов>
+								<name>
+									<value>Наличие имплантов</value>
+								</name>
+								<value>
+									<value>нет</value>
+									<defining_code>
+										<terminology_id>
+											<value>local</value>
+										</terminology_id>
+										<code_string>at0.2</code_string>
+									</defining_code>
+								</value>
+							</Наличие_имплантов>
+							<Описание_имплантов>
+								<name>
+									<value>Описание имплантов</value>
+								</name>
+								<value>
+									<rm:value>ввввввввввввввввввввв</rm:value>
+								</value>
+							</Описание_имплантов>
+							<Кальцинаты_доброкачественные>
+								<name>
+									<value>Кальцинаты доброкачественные</value>
+								</name>
+								<Наличие>
+									<name>
+										<value>Наличие</value>
+									</name>
+									<value>
+										<value>нет</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0.11</code_string>
+										</defining_code>
+									</value>
+								</Наличие>
+								<Характеристика_кальцинатов>
+									<name>
+										<value>Характеристика кальцинатов</value>
+									</name>
+									<value>
+										<value>внутрикожные</value>
+									</value>
+								</Характеристика_кальцинатов>
+								<Локализация_кальцинатов>
+									<name>
+										<value>Локализация кальцинатов</value>
+									</name>
+									<value>
+										<value>ВВК (верхний внутренний к.)</value>
+									</value>
+								</Локализация_кальцинатов>
+								<Описание>
+									<name>
+										<value>Описание</value>
+									</name>
+									<value>
+										<rm:value>гггггггггггггг</rm:value>
+									</value>
+								</Описание>
+							</Кальцинаты_доброкачественные>
+							<Кальцинаты_подозрительные>
+								<name>
+									<value>Кальцинаты подозрительные</value>
+								</name>
+								<Наличие>
+									<name>
+										<value>Наличие</value>
+									</name>
+									<value>
+										<value>нет</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0.22</code_string>
+										</defining_code>
+									</value>
+								</Наличие>
+								<Описание>
+									<name>
+										<value>Описание</value>
+									</name>
+									<value>
+										<rm:value>дддддддддддд</rm:value>
+									</value>
+								</Описание>
+							</Кальцинаты_подозрительные>
+							<Нарушение_архитектоники_ткани>
+								<name>
+									<value>Нарушение архитектоники ткани</value>
+								</name>
+								<value>
+									<value>не выявлено</value>
+								</value>
+							</Нарушение_архитектоники_ткани>
+							<Интрамаммарные_л_fslash_узлы>
+								<name>
+									<value>Интрамаммарные л/узлы</value>
+								</name>
+								<value>
+									<value>не выявлены</value>
+								</value>
+							</Интрамаммарные_л_fslash_узлы>
+							<Аксиллярные_л_fslash_узлы>
+								<name>
+									<value>Аксиллярные л/узлы</value>
+								</name>
+								<value>
+									<value>не выявлены</value>
+								</value>
+							</Аксиллярные_л_fslash_узлы>
+							<Тип_плотности_тканей_по_ACR>
+								<name>
+									<value>Тип плотности тканей по ACR</value>
+								</name>
+								<value>
+									<value>A</value>
+									<defining_code>
+										<terminology_id>
+											<value>local</value>
+										</terminology_id>
+										<code_string>at0.5</code_string>
+									</defining_code>
+								</value>
+							</Тип_плотности_тканей_по_ACR>
+							<Кожа_comma__сосок_и_ареола>
+								<name>
+									<value>Кожа, сосок и ареола</value>
+								</name>
+								<Кожа_comma__сосок_и_ареола>
+									<name>
+										<value>Кожа, сосок и ареола</value>
+									</name>
+									<value>
+										<value>не изменены</value>
+									</value>
+								</Кожа_comma__сосок_и_ареола>
+								<Кожа_comma__сосок_и_ареола>
+									<name>
+										<value>Кожа, сосок и ареола #2</value>
+									</name>
+									<value>
+										<value>утолщение кожи</value>
+									</value>
+								</Кожа_comma__сосок_и_ареола>
+							</Кожа_comma__сосок_и_ареола>
+							<Структура_ткани>
+								<name>
+									<value>Структура ткани</value>
+								</name>
+								<Изменение_структуры>
+									<name>
+										<value>Изменение структуры</value>
+									</name>
+									<value>
+										<value>не изменена</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0002</code_string>
+										</defining_code>
+									</value>
+								</Изменение_структуры>
+								<Структура_ткани>
+									<name>
+										<value>Структура ткани</value>
+									</name>
+									<value>
+										<value>железисто - фиброзная</value>
+									</value>
+								</Структура_ткани>
+								<Асимметрия_структуры>
+									<name>
+										<value>Асимметрия структуры</value>
+									</name>
+									<value>
+										<value>нет</value>
+									</value>
+								</Асимметрия_структуры>
+							</Структура_ткани>
+							<Образования>
+								<name>
+									<value>Образования</value>
+								</name>
+								<Образования>
+									<name>
+										<value>Образования</value>
+									</name>
+									<value>
+										<value>не выявлены</value>
+										<defining_code>
+											<terminology_id>
+												<value>local</value>
+											</terminology_id>
+											<code_string>at0008</code_string>
+										</defining_code>
+									</value>
+								</Образования>
+								<Клиническое_описание>
+									<name>
+										<value>Клиническое описание</value>
+									</name>
+									<value>
+										<rm:value>жжжжжжжжжжжжжжжжжж</rm:value>
+									</value>
+								</Клиническое_описание>
+								<Локализация>
+									<name>
+										<value>Локализация</value>
+									</name>
+									<value>
+										<value>ВНК (верхний наружный квадрант)</value>
+									</value>
+								</Локализация>
+								<Форма>
+									<name>
+										<value>Форма</value>
+									</name>
+									<Форма>
+										<name>
+											<value>Форма</value>
+										</name>
+										<value>
+											<value>неправильная</value>
+										</value>
+									</Форма>
+								</Форма>
+								<Контуры>
+									<name>
+										<value>Контуры</value>
+									</name>
+									<Контуры>
+										<name>
+											<value>Контуры</value>
+										</name>
+										<value>
+											<rm:value>ззззззззззззззззззз</rm:value>
+										</value>
+									</Контуры>
+								</Контуры>
+								<Плотность>
+									<name>
+										<value>Плотность</value>
+									</name>
+									<Плотность>
+										<name>
+											<value>Плотность</value>
+										</name>
+										<value>
+											<rm:value>ииииииииииииииииии</rm:value>
+										</value>
+									</Плотность>
+								</Плотность>
+							</Образования>
+							<Дополнительные_изменения>
+								<name>
+									<value>Дополнительные изменения</value>
+								</name>
+								<Дополнительные_изменения>
+									<name>
+										<value>Дополнительные изменения</value>
+									</name>
+									<value>
+										<rm:value>ккккккккккккккккккккккккк</rm:value>
+									</value>
+								</Дополнительные_изменения>
+							</Дополнительные_изменения>
+						</Исследование_молочной_железы_слева>
+					</data>
+				</Любое_событие_as_Point_Event>
+			</data>
+		</Лучевая_диагностика>
+	</Описание_снимков_и_заключение>
+	<Заключение>
+		<name>
+			<value>Заключение</value>
+		</name>
+		<Заключение_инструментального_исследования>
+			<name>
+				<value>Заключение инструментального исследования</value>
+			</name>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>ru</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="rm:PARTY_SELF"/>
+			<data>
+				<Патологических_изменений_не_выявлено>
+					<name>
+						<value>Патологических изменений не выявлено</value>
+					</name>
+					<value>
+						<rm:value>true</rm:value>
+					</value>
+				</Патологических_изменений_не_выявлено>
+				<По_сравнению_с_РГ_-_данными_от>
+					<name>
+						<value>По сравнению с РГ-данными от</value>
+					</name>
+					<value>
+						<value>2021-05-13</value>
+					</value>
+				</По_сравнению_с_РГ_-_данными_от>
+				<Динамика>
+					<name>
+						<value>Динамика</value>
+					</name>
+					<value>
+						<value>положительная динамика</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0010</code_string>
+						</defining_code>
+					</value>
+				</Динамика>
+				<Степень_изменений>
+					<name>
+						<value>Степень изменений</value>
+					</name>
+					<value>
+						<value>минимальная</value>
+						<defining_code>
+							<terminology_id>
+								<value>local</value>
+							</terminology_id>
+							<code_string>at0016</code_string>
+						</defining_code>
+					</value>
+				</Степень_изменений>
+				<Описание>
+					<name>
+						<value>Описание</value>
+					</name>
+					<value>
+						<rm:value>мммммммм</rm:value>
+					</value>
+				</Описание>
+				<Рентгенологические_признаки_патологии>
+					<name>
+						<value>Рентгенологические признаки патологии</value>
+					</name>
+					<value>
+						<rm:value>нннннннннннннннн</rm:value>
+					</value>
+				</Рентгенологические_признаки_патологии>
+				<Справочник_BI_-_RADS>
+					<name>
+						<value>Справочник BI-RADS</value>
+					</name>
+					<value>
+						<value>1</value>
+					</value>
+				</Справочник_BI_-_RADS>
+				<Справочник_BI_-_RADS_правая_железа>
+					<name>
+						<value>Справочник BI-RADS правая железа</value>
+					</name>
+					<value>
+						<value>1</value>
+					</value>
+				</Справочник_BI_-_RADS_правая_железа>
+				<Справочник_BI_-_RADS_левая_железа>
+					<name>
+						<value>Справочник BI-RADS левая железа</value>
+					</name>
+					<value>
+						<value>1</value>
+					</value>
+				</Справочник_BI_-_RADS_левая_железа>
+				<Заключение>
+					<name>
+						<value>Заключение</value>
+					</name>
+					<value>
+						<rm:value>оооооооооооооооооооооо без патологий</rm:value>
+					</value>
+				</Заключение>
+			</data>
+		</Заключение_инструментального_исследования>
+	</Заключение>
+	<Рекомендации>
+		<name>
+			<value>Рекомендации</value>
+		</name>
+		<Дообследование>
+			<name>
+				<value>Дообследование</value>
+			</name>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>ru</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="rm:PARTY_SELF"/>
+			<data>
+				<Обоснование>
+					<name>
+						<value>Обоснование</value>
+					</name>
+					<value>
+						<rm:value>ппппппппп</rm:value>
+					</value>
+				</Обоснование>
+			</data>
+		</Дообследование>
+		<Прочее>
+			<name>
+				<value>Прочее</value>
+			</name>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>ru</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="rm:PARTY_SELF"/>
+			<data>
+				<Рекомендации>
+					<name>
+						<value>Рекомендации</value>
+					</name>
+					<value>
+						<rm:value>рррррррррррррр</rm:value>
+					</value>
+				</Рекомендации>
+				<Обоснование>
+					<name>
+						<value>Обоснование</value>
+					</name>
+					<value>
+						<rm:value>сссссссссссссссс</rm:value>
+					</value>
+				</Обоснование>
+			</data>
+		</Прочее>
+	</Рекомендации>
+	<Сведения_о_выполнении>
+		<name>
+			<value>Сведения о выполнении</value>
+		</name>
+		<Инструментальное_исследование>
+			<name>
+				<value>Инструментальное исследование</value>
+			</name>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>ru</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="rm:PARTY_SELF"/>
+			<protocol>
+				<Дата_fslash_время_начала>
+					<name>
+						<value>Дата/время начала</value>
+					</name>
+					<value>
+						<rm:value>2021-05-31T17:49:14.004+03:00</rm:value>
+					</value>
+				</Дата_fslash_время_начала>
+			</protocol>
+			<time>
+				<rm:value>2021-05-31T17:49:14.006+03:00</rm:value>
+			</time>
+			<Название_исследования>
+				<name>
+					<value>Название исследования</value>
+				</name>
+				<value>
+					<rm:value>Маммография молочной железы профилактическая</rm:value>
+				</value>
+			</Название_исследования>
+			<instruction_details>
+				<instruction_id>
+					<rm:id xsi:type="rm:HIER_OBJECT_ID">
+						<rm:value>79fcddc6-fc74-43db-9a86-0d36ef18c146::default::1</rm:value>
+					</rm:id>
+					<rm:namespace>local</rm:namespace>
+					<rm:type>INSTRUCTION</rm:type>
+				</instruction_id>
+				<activity_id>activities[at0001]</activity_id>
+			</instruction_details>
+			<ism_transition>
+				<current_state>
+					<rm:value>completed</rm:value>
+					<rm:defining_code>
+						<rm:terminology_id>
+							<rm:value>openehr</rm:value>
+						</rm:terminology_id>
+						<rm:code_string>532</rm:code_string>
+					</rm:defining_code>
+				</current_state>
+				<careflow_step>
+					<rm:value>Исследование и сопутствующие действия полностью выполнены</rm:value>
+					<rm:defining_code>
+						<rm:terminology_id>
+							<rm:value>local</rm:value>
+						</rm:terminology_id>
+						<rm:code_string>at0007</rm:code_string>
+					</rm:defining_code>
+				</careflow_step>
+			</ism_transition>
+		</Инструментальное_исследование>
+	</Сведения_о_выполнении>
+</Результат_РГ_маммографии>
