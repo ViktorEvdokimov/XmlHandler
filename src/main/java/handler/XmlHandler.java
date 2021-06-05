@@ -23,7 +23,7 @@ public class XmlHandler {
     static int numberInDesiredGroup;
 
     public static void main(String[] args) {
-        String desiredPath = "context/Подробности_контекста/ИД_пациента/value/rm:id";
+        String desiredPath = "context/Подробности_контекста/ИД_пациента/value[2]";
         numberInDesiredGroup = 0;
         String filepath = "src/main/resources/files/52122.xml";
         try {
@@ -64,17 +64,27 @@ public class XmlHandler {
         System.out.println("Looking fore: " + step);
         for (int i=0; i<nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
-            if (node.getNodeName().equals(step)){
-                if(steps.size()==0){
-                    System.out.println(node.getTextContent());
-                    NodeList childNodes = node.getChildNodes();
-                    childNodes.item(numberInDesiredGroup).setTextContent("qwer4");
-                    System.out.println("complete");
-                    return true;
-                } else {
-                    NodeList childNodes = node.getChildNodes();
-                    if (nodesHandler(childNodes, steps)) return true;
+            String openSymbol = "\\[";
+            String[] parts = step.split(openSymbol);
+            if (node.getNodeName().equals(parts[0])){
+                NodeList childNodes = node.getChildNodes();
+                if (parts.length==2) {
+                    StringBuilder sb = new StringBuilder();
+                    for (int j = 0; j < (parts[1].length() - 1); j++) {
+                        sb.append(parts[1].charAt(j));
+                    }
+                    int nextStep = Integer.parseInt(sb.toString());
+                    node = childNodes.item((nextStep+1)*2-1);
+                    childNodes = node.getChildNodes();
                 }
+                    if (steps.size() == 0) {
+                        System.out.println(node.getTextContent());
+                        childNodes.item(numberInDesiredGroup).setTextContent("qw1234");
+                        System.out.println("complete");
+                        return true;
+                    } else {
+                        if (nodesHandler(childNodes, steps)) return true;
+                    }
             }
         }
         return false;
