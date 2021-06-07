@@ -1,4 +1,4 @@
-package handler;
+package ru.mos.emias.pmer.GenerateDocuments;
 
 import java.io.File;
 import java.util.List;
@@ -21,13 +21,15 @@ public class XmlHandler {
     /**
      *
      * Работа с методом changeDataInXmlFile:
-     * на вход подается адрес файла в котором необходимо произвести изменения и лист путей в файле и новых значений.
-     * В лист записываются массив из двух строк:
-     *      первая: путь к требуемому параметру в файле, либо название параметра если он определен в frequentlyUsedPaths
-     *      вторая: значение которое необходимо установить по указанному пути.
+     * на вход подается адрес файла в котором необходимо произвести изменения и пути в файле, из которых нужно получить
+     * значения. Если необходимо найти уникальный тег без указания точного пути к нему допускается в пути указать
+     * .../"название уникального тега", далее, если это необходимо, допускается указывать адрес отталкиваясь от
+     * найденного тэга.
      * Также, для наиболее часто используемых параметров подготовлены пути в мапе frequentlyUsedPaths.
-     * Если для необходимого параметра есть ключ в frequentlyUsedPaths, вместо адреса можно указать только название ключа
+     * Если для необходимого параметра есть ключ в frequentlyUsedPaths, вместо пути можно указать только название ключа
      * с учетом регистра.
+     * Метод возвращает массив строк со значениями в указанными полях, в том порядке в котором были указаны пути. Если
+     * не удалось найти значение, то в этой ячейке будет null.
      *
      */
 
@@ -40,43 +42,33 @@ public class XmlHandler {
         frequentlyUsedPaths.put("documentId", "context/Подробности_контекста/ИД_документа/value[2]");
         frequentlyUsedPaths.put("startTimeId", "context/start_time[0]");
         frequentlyUsedPaths.put("eventId", "context/Подробности_контекста/ИД_события/value[2]");
-        frequentlyUsedPaths.put("parentConditionId", "Сведения_о_выполнении/Инструментальное_исследование/instruction_details/instruction_id[0][0]");
-        frequentlyUsedPaths.put("conditionId", "uid[0]");
+        frequentlyUsedPaths.put("compositionId", ".../instruction_details/instruction_id[0][0]");
     }
 
 
-    public static Map<String, Boolean> changeDataInXmlFile (String pathToFile, List<String[]> desiredPathAndNewData){
+    public static String[] changeDataInXmlFile (String pathToFile, String ... desiredPaths){
         // При первом запуске зписываются данные часто используемых адресов
         if(needToDefineMap) defineMap();
-        Map<String, Boolean> results = new HashMap<String, Boolean>();
+        pathToFile = "src/test/resources" + pathToFile;
+        String[] results = new String[desiredPaths.length];
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             // Создается дерево DOM документа из файла
             Document document = documentBuilder.parse(pathToFile);
 
-            for (int i = 0; i < desiredPathAndNewData.size(); i++) {
-                String[] pathAndData = desiredPathAndNewData.get(i);
+            for (int i = 0; i < desiredPaths.length; i++) {
                 // проверяем есть ли для переменной  адресе путь
-                String desiredPath = frequentlyUsedPaths.get(pathAndData[0]);
-                if (desiredPath == null) desiredPath = pathAndData[0];
+                String desiredPath = frequentlyUsedPaths.get(desiredPaths[i]);
+                if (desiredPath == null) desiredPath = desiredPaths[i];
                 String[] steps = desiredPath.split("/");
                 LinkedList<String> stepList = new LinkedList<String>(Arrays.asList(steps));
-
-
                 // Получаем корневой элемент
                 Node root = document.getDocumentElement();
-
                 NodeList nodeList = root.getChildNodes();
-
-                results.put(pathAndData[0], nodesHandler(nodeList, stepList, pathAndData[1]));
+                results[i] = nodesHandler(nodeList, stepList);
             }
 
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(new File(pathToFile));
-            transformer.transform(source, result);
         } catch (Exception ex) {
             ex.printStackTrace(System.out);
         }
@@ -84,8 +76,9 @@ public class XmlHandler {
     }
 
     // метод рекурсивно ищет указанный адрес, если находит записывает значение и выходит из цикла
-    private static boolean nodesHandler(NodeList nodeList, LinkedList<String> steps, String newData){
+    private static String nodesHandler(NodeList nodeList, LinkedList<String> steps){
         String step = steps.removeFirst();
+        if (step.equals("...")) return tegSearcher(nodeList, steps.getFirst(), steps);
 //        System.out.println("Looking fore: " + step);
         for (int i=0; i<nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
@@ -104,17 +97,36 @@ public class XmlHandler {
                         childNodes = node.getChildNodes();
                     }
                 }
-                    if (steps.size() == 0) {
-//                        System.out.println(node.getTextContent());
-                        childNodes.item(0).setTextContent(newData);
+                if (steps.size() == 0) {
+                    String r = node.getTextContent();
+                        return r;
 //                        System.out.println("complete");
-                        return true;
-                    } else {
-                        if (nodesHandler(childNodes, steps, newData)) return true;
-                    }
+
+                } else {
+                    String data = nodesHandler(childNodes, steps);
+                    if (data != null) return data;
+                }
             }
         }
-        return false;
+        return null;
+    }
+
+    private static String tegSearcher(NodeList nodeList, String target, LinkedList<String> steps){
+//        System.out.println("Looking fore: " + step);
+        for (int i=0; i<nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            String openSymbol = "\\[";
+            String[] parts = target.split(openSymbol);
+            NodeList childNodes = node.getChildNodes();
+            if (node.getNodeName().equals(parts[0])){
+                String data = nodesHandler(nodeList, steps);
+                if (data != null) return data;
+            } else {
+                String data = tegSearcher(childNodes, target, steps);
+                if (data != null) return data;
+            }
+        }
+        return null;
     }
 
 }
